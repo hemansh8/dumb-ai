@@ -4,6 +4,7 @@ import SessionWrapper from "../components/SessionWrapper";
 import Login from "../components/Login";
 import { getServerSession } from "next-auth";
 import { authOptions } from "./api/auth/[...nextauth]/route";
+import ClientProvider from '../components/ClientProvider';
 
 export const metadata = {
   title: "Dumb AI",
@@ -24,8 +25,7 @@ export default async function RootLayout({ children }) {
               <div className="flex">
               {/* sidebar */}
               <Sidebar />
-
-              {/* clientProvider */}
+              <ClientProvider />
 
               <div className="content bg-[#343434] flex-1">
                 {children}
