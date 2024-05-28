@@ -19,7 +19,7 @@ const Sidebar = () => {
   );
 
   return (
-    <div className="p-2 flex flex-col h-screen justify-between">
+    <div className="p-2 flex flex-col h-screen justify-between m-w-60">
         <div>
             <NewChat />
             { chats && chats.docs.map(chat => (

@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { database } from '../firebase'
 
-const NewChat = () => {
+const NewChat = ({text}) => {
   const router = useRouter();
   const { data: session } = useSession();
 
@@ -17,11 +17,16 @@ const NewChat = () => {
       createdAt: serverTimestamp()
     });
 
-    router.push(`/chat/${doc.id}]}`);
+    router.push(`/chat/${doc.id}`);
   }
 
   return (
-    <button onClick={createNewChat}>+ New Chat</button>
+    <button 
+      className={`mt-2 p-2 text-center ease-in duration-200 border border-transparent hover:border-gray-700 w-full rounded-full ${text && "w-fit px-10 mt-5 bg-teal-700/10 hover:bg-teal-700"} `}
+      onClick={createNewChat}
+    >
+      {text || "+ New Chat"}
+    </button>
   )
 }
 

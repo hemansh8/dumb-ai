@@ -28,13 +28,13 @@ const Chat = ({ chatId }) => {
           <ArrowDownCircleIcon className="h-12 w-12 mx-auto mt-8 animate-bounce"/>
         </ div>
       )}
-
+      <div className="max-w-4xl mx-auto">
       {
         messages && messages.docs.map(message =>
           <Message key={message.id} message={message} />
         )
       }
-
+      </div>
     </div>
   )
 }
