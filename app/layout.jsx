@@ -3,7 +3,7 @@ import Sidebar from "../components/Sidebar";
 import SessionWrapper from "../components/SessionWrapper";
 import Login from "../components/Login";
 import { getServerSession } from "next-auth";
-import { authOptions } from "./api/auth/[...nextauth]/route";
+import { authOptions } from "../lib/auth";
 import ClientProvider from '../components/ClientProvider';
 
 export const metadata = {

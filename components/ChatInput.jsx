@@ -33,8 +33,8 @@ const ChatInput = ({ chatId }) => {
         );
 
         const notification = toast.loading('dumbAI is thinking...');
-
-        await fetch('/api/askQuestion', {
+        if (process.env.NEXT_PUBLIC_BASE_API_URL) {
+        await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/askQuestion`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -50,6 +50,7 @@ const ChatInput = ({ chatId }) => {
         }).catch(err => {
             console.log(err);
         });
+        }
     }
   return (
     <div>
