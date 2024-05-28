@@ -22,7 +22,7 @@ const NewChat = ({text}) => {
 
   return (
     <button 
-      className={`mt-2 p-2 text-center ease-in duration-200 border border-transparent hover:border-gray-700 w-full rounded-full ${text && "w-fit px-10 mt-5 bg-teal-700/10 hover:bg-teal-700"} `}
+      className={`mt-2 p-2 text-center ease-in duration-200 border border-transparent hover:border-gray-700 rounded-full ${text ? "w-fit px-10 mt-5 bg-teal-700/10 hover:bg-teal-700" : "w-full"} `}
       onClick={createNewChat}
     >
       {text || "+ New Chat"}
