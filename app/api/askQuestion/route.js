@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { adminDb } from '../../../firebaseAdmin';
 import query from '../../../lib/queryApi';
 import admin from "firebase-admin";
+// import logo from "logo.jpg"
 
 const handler = async (req, res) => {
     console.log("HELLOOOOOOOOOOOOOOOOOOOOOOOO");
@@ -30,7 +31,7 @@ const handler = async (req, res) => {
             user: {
                 _id: "ChatGPT",
                 name: "ChatGPT",
-                avatar: "https://ui-avatars.com/api/?name=dumbai"
+                avatar: "/logo.jpg"
             }
         }
 
