@@ -8,7 +8,7 @@ import ClientProvider from '../components/ClientProvider';
 
 export const metadata = {
   title: "Dumb AI",
-  description: "A dumber chat-gpt clone",
+  description: "A chat-gpt clone for all your dumb questions",
 };
 
 export default async function RootLayout({ children }) {
@@ -22,8 +22,7 @@ export default async function RootLayout({ children }) {
           {!session ? (
             <Login />
           ) : (
-              <div className="flex">
-              {/* sidebar */}
+            <div className="flex">
               <Sidebar />
               <ClientProvider />
 
